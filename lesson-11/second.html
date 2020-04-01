@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<input id="age" value="30">
+
+<script>
+'use strict';
+let age = document.getElementById('age');
+class User{
+	constructor(surname,name){
+		this.surname=surname;
+		this.name=name;
+	}
+	showUser(){
+		alert("Пользователь " + this.surname + " " + this.name + ", его возраст " + age.value);
+	}
+}
+	let ivan= new User('mazalov','ivan');
+	ivan.showUser();
+
+</script>
+</body>
+</html>
