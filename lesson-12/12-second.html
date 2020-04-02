@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+
+<script>
+	class Options{
+		constructor(height, width, bg, fontSize,textAlign){
+			this.height=height;
+			this.width=width;
+			this.bg=bg;
+			this.fontSize=fontSize;
+			this.textAlign=textAlign;
+		}
+		createDiv(){
+			let elem=document.createElement('div'),
+				param=`height:${this.height}px;width:${this.width}px;background-color:${this.bg};font-size:${this.fontSize}px;text-align:${this.textAlign}`;
+			
+			elem.style.cssText=param;
+			document.body.appendChild(elem);
+			elem.textContent=prompt('insert text here');
+			
+		}
+	}
+	let diver= new Options(100,100,'red',14,'center');
+	diver.createDiv();
+
+</script>
+</body>
+</html>
